@@ -1,0 +1,300 @@
+body, html {
+	background:#ededed;
+	line-height:20px;
+	font-size:14px;
+	color:#333;
+	font-family: 'Arial', sans-serif;
+	font-weight:normal;  
+}
+h1 {        
+	color: #666;
+	font-size: 24px;
+	text-shadow: 0 0 1px rgba(51,51,51,0.3);
+	text-align:center;
+	line-height: 60px;
+}
+h2 {
+	font-size:20px;
+	line-height:36px;
+	text-shadow:0 0 1px rgba(51,51,51,0.2);
+	padding-bottom:5px;
+	margin-bottom:15px;
+	border-bottom:1px solid #ccc;
+}
+h3 {
+	font-family: ìMyriad Proî, Arial, Helvetica, Tahoma, sans-serif;
+	font-size:18px;
+	line-height:26px;
+	font-weight:400;
+	letter-spacing:-1px;
+	font-weight:normal;
+}
+a.link, a:active, a:selected {
+	border:none;
+	outline:none;  
+}       
+
+a.link, a:visited{
+	color: #00BFFF;  
+}       
+
+.longText{
+	width: 960px;
+	margin: 0 auto;
+}                  
+
+.longText p{
+	line-height:  150%;
+	clear: left;
+	margin: 12px 0;
+}
+
+
+            
+/* set the whole slider's width and height, keep same as defined in the jQuery */
+/* the example3 banner, it's static in the page */
+.example3 {
+	width: 1920px;		   
+	height: 1080px;		  
+	position: relative;
+	background: #333333;
+	font: "Lucida Grande", "Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+	z-index: 999;
+}       
+
+.example3 .thumbnails{
+	color: #EFEFEF;
+} 
+
+#banner {                           
+	margin: 0;
+	padding: 0;  
+	height: 424px;
+	overflow: hidden;		
+}         
+
+
+.bigImages{
+	position: relative;
+	float: left;	 
+	width: 1520px;    
+	margin: 12px;     	
+}
+
+.bigImages ul li{
+	display: block;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;           
+}      
+
+.bigImageOnRight{
+	position: relative;
+	float: right;     
+	margin: 12px 12px 12px 0;     	
+}        
+     
+
+.vimeo, .youtube{
+	background: #000000;
+	width: 1580px;
+	height: 1050px;
+	overflow: hidden;
+}
+
+.thumbnails{
+	position: relative;
+	float: right;  
+	width: 280px;
+	padding: 8px 14px 0 18px;  
+	color: #FFF;       
+	font-family: helvetica, "Lucida Grande", "Lucida Sans Unicode", verdana, arial, sans-serif;
+}  
+
+.thumbnailsOnLeft{    
+	float: left;       
+	padding: 16px 0 0 16px;
+}    
+
+.thumbnails a{
+	color: #00BFFF;
+}  
+
+.thumbnails .note{     
+	padding: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;	 	
+	background: #9ACD32;
+	color: #FFF;
+}
+              
+.thumbnails .vimeo{
+	background: #00BDEE;
+}                       
+
+.thumbnails .youtube{
+	background: #FF3333;
+}
+
+.thumbnails ul li{
+	width: 65px;
+	height: 41px;
+	display: block;
+	float: left;
+	border: 2px solid #FFF;
+	margin: 4px;
+}                
+
+.thumbnails ul li.active{
+	border: 2px solid #00BFFF;
+}                
+
+
+.thumbnails h3{
+	font-size: 20px; 
+	padding: 4px;
+}
+                    
+.thumbnails p{
+	font-size: 12px;   
+	margin: 8px 0;
+	padding: 4px;  
+	clear: left;  
+}           
+
+.closeButton{
+	background: url(../images/assets/close.png) no-repeat; 
+	width: 25px;
+	height: 25px;      
+	position: absolute;
+	top: -12px;	 
+	right: -12px;        
+}      
+
+.closeButtonLeft{
+	top: -12px;
+	left: -12px;
+}
+
+.arrowButton{    
+    cursor: pointer;  
+}            
+.arrowButton .prevArrow{
+    background: url(../images/assets/prev.png) no-repeat; 
+    width: 40px;
+    height: 80px;      
+    position: absolute;
+    top: 160px;     
+    left: 12px;        
+} 
+.arrowButton .nextArrow{                 
+    background: url(../images/assets/next.png) no-repeat;
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    top: 160px;
+    right: 12px;              
+}  
+
+
+
+/*
+Animate.css - http://daneden.me/animate
+LICENSED UNDER THE  MIT LICENSE (MIT)
+
+Copyright (c) 2011 Dan Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.animated {
+	-webkit-animation: .6s ease;
+	-moz-animation: .6s ease;
+	-ms-animation: .6s ease;
+	-o-animation: .6s ease;
+	animation: .6s ease;
+}
+
+.animated2 {
+	-webkit-animation: 0.6s ease;
+	-moz-animation: 0.6s ease;
+	-ms-animation: 0.6s ease;
+	-o-animation: 0.6s ease;
+	animation: 0.6s ease;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0); }  
+	50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(0); }	
+	50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+}
+@-ms-keyframes pulse {
+    0% { -ms-transform: scale(0); }	
+	50% { -ms-transform: scale(1.1); }
+    100% { -ms-transform: scale(1); }
+}
+@-o-keyframes pulse {
+    0% { -o-transform: scale(0); }	
+	50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(0); }	
+	50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-ms-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+}
+
+
+@-webkit-keyframes pulseHide {
+    0% { -webkit-transform: scale(1); }  
+	50% { -webkit-transform: scale(.5); }
+    100% { -webkit-transform: scale(0); }
+}
+@-moz-keyframes pulseHide {
+    0% { -moz-transform: scale(1); }	    
+	50% { -moz-transform: scale(.5); }
+    100% { -moz-transform: scale(0); }
+}
+@-ms-keyframes pulseHide {
+    0% { -ms-transform: scale(1); }	
+	50% { -ms-transform: scale(.5); }
+    100% { -ms-transform: scale(0); }
+}
+@-o-keyframes pulseHide {
+    0% { -o-transform: scale(1); }	
+	50% { -o-transform: scale(.5); }
+    100% { -o-transform: scale(0); }
+}
+@keyframes pulseHide {
+    0% { transform: scale(1); }	
+	50% { transform: scale(.5); }
+    100% { transform: scale(0); }
+}
+
+.pulseHide {
+	-webkit-animation-name: pulseHide;
+	-moz-animation-name: pulseHide;
+	-ms-animation-name: pulseHide;
+	-o-animation-name: pulseHide;
+	animation-name: pulseHide;
+}
