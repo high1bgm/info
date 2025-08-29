@@ -1,0 +1,16 @@
+UPDATES
+18th July 2015 - replace style > js > scripts.js
+Add: social_tools: false, if you don’t want to use Twitter & Facebook links on Pretty Photo
+
+9th November 2013
+- Upated Google Map.
+If updating:
+1: Add style > js > gmap3.js
+2: Scroll down to the bottom of the new index file and add the new code downwards from
+commented <!-- GOOGLE MAP -->
+3: Add your address, you can also alter the zoom of the map e.g zoom: 14,
+
+
+15th June 2013:
+Twitter feed removed due to new Twitter API.
+

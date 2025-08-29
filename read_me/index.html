@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		body {font-size:80%;color:#222;background-image: url(assets/images/bg1.jpg); 
+
+background-repeat:repeat;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;padding-top:30px;}
+hr {background: url(assets/images/menuline.png) bottom repeat-x;
+clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;}
+	</style>
+</head>
+<body>
+<div class="container">
+<h3 class="center alt">&ldquo;Creative Portfolio&rdquo; Documentation by &ldquo;josweb&rdquo; v1.0</h3>
+<hr>
+<h1 class="center">&ldquo;CreativeFlow&rdquo;</h1>
+		
+<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 16/9/2011<br>
+					By: Jo Phillips<br>
+					Website: <a href="http://spiralpixel.com">spiralpixel.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/josweb">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+<hr>
+<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript &amp; Php</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+</ol>
+
+<hr>
+<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+<p><b>Navigation</b><br>
+
+<img src="assets/images/menu.jpg">
+</p><p>The menu is set using id tags each should be unique and link to each section in the content.<br>
+You can change the speed and style of scrolling in the file style > js> scripts.js. Scroll down until you see - Navigation and along the code until you see: animationTime:1300,easing:["easeInOutBack"]}; Lowering the time speeds up the scrolling, and easing is the style in which the page scrolls. More effects can be found here - http://gsgd.co.uk/sandbox/jquery/easing/<br><br>
+You can also link to any section of the site using the class "visualNav" in your link along with the id of the section that you want to scroll to.<br>
+e.g &lt;a href="#team" class="visualNav">fascinating&lt;/a> kind of art. 
+<p><b>Home Slider</b><br>
+The sections are controlled by a slider called Awkward (link below).  <br>Pictures sizes are: 830px x 470px. You can add images, video and your own html to this slider.
+
+	
+	
+<p><b>The Team Section</b><br>
+The team pictures are 250px 220px in size. The text in the overlay effect is added into the h4 tag.<br>
+<img src="assets/images/team.jpg">
+<br><br>
+Each team member's information is added into the div - bio_text.<br>
+<img src="assets/images/bio.jpg"></p>
+<p><b>Services Section</b><br>
+The small carousel pictures are 75px 75px in size.</p>
+
+<p><b>Projects</b><br>
+1: Carousel Content slider - Picture Sizes: 450px x 230px<br>
+2: Vertical Scroll Gallery - Picture Sizes: 240px x 180px</p>
+
+<p><b>Portfolio</b><br>
+1: Thumbnails -  The thumbnails are 269px x 160px in size and are stored in folder,  style >images > work. They open using PrettyPhoto. More information on this can be found in the php section below.<br/>
+2: The sortable galley is controlled using a list - (portfolio-filter).  Add your categories into the list and name them. e.g web, icons, art....<br/>
+2: Add your pictures and in the li class, name  the category that you want the picture to be in.  To get the images to sort, mix up your classes.  You can see how to do this by following my code.</p>
+
+
+<p><b>Contact Section</b>
+	<br><b>Contact Form:</b><br>
+		2: To get the contact form to forward to your email address.<br>
+		a) In a text editor of your choice, open send.php <br>
+	At the top of the page, you will see the following code:<br>
+	$email_to = "ADD YOUR EMAIL ADDRESS HERE";
+		
+<br>b) Simply add your email address within the quote marks where it says - Add Your Email Address<br>
+c) You may also want to change the thank you message. You can do this by opening style > js > scripts.js<br>
+Find the commented section - 'Form Validation Script' which is right at the bottom of the code.<br>You will see: &lt;p class="success">Thanks!&lt;br/>Your email was sent successfully.&lt;br/>We will contact you as soon as possible.&lt;/p><br>Change this to your thank you message.</p>
+
+<p>
+
+<b>Google Map:</b><br>
+Simply add your address at the foot of index.html.</p>
+
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+			$(document).ready(function(){
+				var map = new GMap2($("#map").get(0));
+				// set the latitide and longitude for the center point - you can get yours from - http://itouchmap.com/latlong.html
+   			var buckingham_palace  = new GLatLng(51.494926,-0.146192);    
+   			// value 1 is the center, value 2 is the zoom level
+    		map.setCenter(buckingham_palace, 16);  
+			map.setUIToDefault();
+			});
+			//]]>
+			</script></p>
+			
+			<p><b>Css Buttons</b><br>
+			The coloured buttons can be used as follows:<br>
+			Green Button: &lt;a href="#" class="green button">button</a><br>
+			Blue Button: &lt;a href="#" class="blue button">button</a><br>
+			Pink Button: &lt;a href="#" class="pink button">button</a><br>
+			Red Button: &lt;a href="#" class="red button">button</a><br>
+			Orange Button: &lt;a href="#" class="orange button">button</a><br>
+			Yellow Button: &lt;a href="#" class="yellow button">button</a><br>
+			White Button: &lt;a href="#" class="white button">button</a><br>
+			Grey Button: &lt;a href="#" class="grey button">button</a><br>
+	
+	
+			</p>
+
+
+<br>
+<hr>
+<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+<p>I'm using one CSS file for this theme.  - main.css. </p> 
+<pre>
+
+body { 
+	background: #333; 
+	font: 12px/1.8em "Century Gothic", Arial, Helvetica, sans-serif; color: #bbb;
+	background-image: url(style/images/bg/linen.png); background-repeat: repeat;
+	}
+	
+/* Wrapper - Menu and Content */	
+#wrapper{
+	width:870px; 
+	margin: 0px auto 0px auto; 
+	}
+
+/* Content Container */	
+.content { 
+	width: 870px; 
+	background: transparent;
+	margin: 0px 0px 50px auto; padding: 180px 0px 0px 0px; 
+	min-height: 500px;
+	}
+</pre>
+1: body:  You can change the background pattern here. A selection of backgrounds, can be found in the folder, images &gt; bg.	<br>
+2:  Wrapper - Holds the content.<br>
+3: Content - Contains the content and sets the height under the menu header section.
+<pre>
+/* Menu Styling */
+#header{
+	border-bottom: 3px double #777;
+	position: fixed; top: 0px;  padding:0  0;
+	background-image: url(style/images/bg/linen.png); background-repeat: repeat;
+	background-position: 15px 0px; width: 960px; height: 165px; text-align: center;
+	z-index: 2000; margin-left: -45px;
+	}
+	
+.logo {margin:0px 0px 17px 0px;}
+
+#menu ul{ margin: 0; padding: 0; position: relative; }
+#menu ul li{ list-style:none; display:inline; font: 12px/1.8em "Century Gothic", Arial, Helvetica, sans-serif; }
+#menu  a{ text-shadow: 0px 1px 0px #222; border-right:1px dotted #666; padding: 2px 9px;
+text-align:center; text-transform:uppercase; }
+#menu .last { border-right:0px; }
+#menu ul li a:hover{  color: #bbb; text-decoration:none; }
+
+#shadow {
+    background-color: transparent;
+    height: 5px;
+    width: 940px;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+	box-shadow-bottom: 0px 10px 10px #111;
+    -moz-box-shadow: 0px 10px 10px #111;
+    -webkit-box-shadow: 0px 10px 10px #111;
+}
+</pre>
+1: Header - The container for your logo and menu.<br>
+2: Menu - menu styling<br>
+3: Shadow - Shadow effect under the menu.
+
+</p><p>
+<b>Skins</b>
+I have designed ten skins for you to choose from. They can be found in the folder extras > css.
+If you want to select another theme style, simply move it into your main folder and rename it > main.css.<br>
+Also, if you would like to add one of the backgrounds to your own design, add it to both the body and menu header (commented for you in the css).
+
+
+<br>
+<b>Font replacement</b><br>
+This theme uses LeagueGothicRegular for the main iheadings and OldStandardTTItalic for the italic intro text.
+<br>
+<b>Extras</b><br>
+I have included some psd elements in extras > psd folder, these are choices for the logo ribbon including a .pat file, icons for services and social networks. Icons can be found images > icons. The social network icons images > 32social<br>
+c) Extra backgrounds can be found in images > bg.
+<br>
+<br>
+<hr>
+<h3 id="javascript"><strong>C) JavaScript &amp; Php</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme uses javascript and php.</p>
+		
+		<ol>
+		
+<li><b>Awkward Slider</b><br>Used for the home page image slider. You don't need to do anything with the coding, but if you do you can find everything in the js folder. To add your images, size them  830px x 470px and place them into your images folder. The html has been commented for you. (link in credits).
+</li>
+<li><b>Team Pictures Overlay</b><br>Sliding Boxes Jquery is used for the fade efect which reveals text of your choice. The script can be edited in style > js > scripts.js, commented - 'Team Pics Overlay'.
+</li>
+
+			<li>Pretty Photo is used for the portfolio section. "prettyPhoto is a jQuery lightbox clone. Not only does it support images, it also support for videos, flash, YouTube, iframes and ajax." (link in credits).
+</li>
+<li><b>LightBox Effect</b><br>
+&lt;a href="style/images/work/large.jpg" rel="prettyPhoto[portfolio]">view&lt;/a>&lt;/p>
+              &lt;/div>&lt;img src="style/images/work/art.jpg" width="269" height="160" alt="" class="portimg" />
+
+<br>
+1: large.jpg is your large pop-up image and art.jpg is your thumbnail. Simply add your own graphics and place them in the folder > images > work.<br>
+The portfolio hover  opacity can be edited in style > js >scripts.js, commented  'Zoom Portfolio Hover'.
+</li>
+
+<li> <b>TipTip Jquery</b><br>Used for the hover tool tip effect on text links. <br>
+To get this to work simply add a title tag to your link and:<br>
+a) class="tooltip" -  for a hover above tool tip <br>
+</li>
+</ol>
+		
+<hr>
+<h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul><li>VisualNav- https://github.com/Mottie/visualNav/wiki</li>
+		<li>Awkward Slider - http://www.awkwardgroup.com/sandbox/awkward-showcase-a-jquery-plugin/</li>
+		<li> Sliding Boxes- http://buildinternet.com/2011/03/mosaic-sliding-boxes-and-captions-jquery-plugin/</li>
+			<li>Pretty Photo - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</li>
+			<li>TipTip - http://code.drewwilson.com/entry/tiptip-jquery-plugin/</li>
+			
+			<li>Tabs and Accordian - http://flowplayer.org/tools/scrollable/</li>
+			<li>Roundabout Carousel - http://fredhq.com/projects/roundabout/</li>
+			<li>Google Maps Tutorial - http://marcgrabanski.com/articles/jquery-google-maps-tutorial-basics</li>
+			<li>Social Icons - http://www.danieleckermann.com/linkdeck/</li>
+			<li>Plastique Icons - http://iconify.it/free-stuff/plastique-icons-full-set/</li>
+			<li>Socal Icons - http://www.stampaxx.com/</li>
+			<li>Portfolio Images by DesignKindle  - http://www.designkindle.com, Egirldesign - http://egirldesign.deviantart.com/ and me!</li>
+		</ul>
+	
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Jo Phillips</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
